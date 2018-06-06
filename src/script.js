@@ -84,6 +84,17 @@ module.exports = robot => {
     return generate(robot, res, query)
   })
 
+  // Clippy
+  robot.hear(/(it looks like you're .*) (Would you like .*)/, res => {
+    const query = {
+      template_id: 127289854,
+      text0: res.match[1],
+      text1: res.match[2]
+    }
+    return generate(robot, res, query)
+ 
+  })
+
   robot.hear(/brace yourselves (.+)/i, res => {
     const query = {
       template_id: 61546,

@@ -104,7 +104,7 @@ module.exports = robot => {
     return generate(robot, res, query)
   })
 
-  robot.hear(/(.+) (ALL THE) (.+)/i, res => {
+  robot.hear(/(.+) (ALL THE THINGS)/, res => {
     const query = {
       template_id: 61533,
       text0: res.match[1],

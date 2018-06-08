@@ -108,7 +108,7 @@ module.exports = robot => {
     const query = {
       template_id: 61533,
       text0: res.match[1],
-      text1: res.match[3]
+      text1: 'ALL THE THINGS!!!'
     }
     return generate(robot, res, query)
   })
